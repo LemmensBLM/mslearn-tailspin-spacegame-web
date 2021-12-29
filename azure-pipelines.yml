@@ -8,14 +8,9 @@ trigger:
 
 pool:
   name: 'MyAgentPool'
-  demands:
-  - npm
 
 variables:
   buildConfiguration: 'Release'
-  wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-  dotnetSdkVersion: '5.x'
-
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
